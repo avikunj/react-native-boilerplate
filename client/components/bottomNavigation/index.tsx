@@ -56,20 +56,23 @@ export default function AppBottomNavigation() {
           }}
         />
       )}>
-      {routes?.map((item, elem) => {
-        return (
-          <Tab.Screen
-            name={item.name}
-            component={item.component}
-            options={{
-              tabBarLabel: item.title,
-              tabBarIcon: ({color, size}) => {
-                return <Icon name={item.icon} size={size} color={color} />;
-              },
-            }}
-          />
-        );
-      })}
+      {routes
+        ?.filter(a => a?.showInBottomNav)
+        ?.map((item, elemIndex) => {
+          return (
+            <Tab.Screen
+              key={elemIndex}
+              name={item.name}
+              component={item.component}
+              options={{
+                tabBarLabel: item.title,
+                tabBarIcon: ({color, size}) => {
+                  return <Icon name={item.icon} size={size} color={color} />;
+                },
+              }}
+            />
+          );
+        })}
     </Tab.Navigator>
   );
 }
