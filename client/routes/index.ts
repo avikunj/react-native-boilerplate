@@ -1,4 +1,8 @@
-import {HomeScreen, SettingsScreen} from '../components/bottomNavigation';
+import HomeScreen from '../screens/home';
+import NotificationsScreen from '../screens/notifications';
+import ProfileScreen from '../screens/profile';
+import SearchScreen from '../screens/search';
+import SettingsScreen from '../screens/settings';
 
 export const routes = [
   {
@@ -11,21 +15,21 @@ export const routes = [
   {
     name: 'Alerts',
     title: 'Alerts',
-    component: HomeScreen,
+    component: NotificationsScreen,
     icon: 'bell',
     showInBottomNav: true,
   },
   {
     name: 'Search',
     title: 'Search',
-    component: HomeScreen,
+    component: SearchScreen,
     icon: 'magnify',
     showInBottomNav: true,
   },
   {
     name: 'Profile',
     title: 'Profile',
-    component: HomeScreen,
+    component: ProfileScreen,
     icon: 'account',
     showInBottomNav: true,
   },
