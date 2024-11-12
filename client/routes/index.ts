@@ -1,7 +1,9 @@
 import HomeScreen from '../screens/home';
 import NotificationsScreen from '../screens/notifications';
 import ProfileScreen from '../screens/profile';
+import EditProfileScreen from '../screens/profile-edit';
 import SearchScreen from '../screens/search';
+import SearchResultsScreen from '../screens/search-results';
 import SettingsScreen from '../screens/settings';
 
 export const routes = [
@@ -27,6 +29,14 @@ export const routes = [
     showInBottomNav: true,
   },
   {
+    name: 'Search Results',
+    title: 'Search Results',
+    component: SearchResultsScreen,
+    icon: 'magnify',
+    showInBottomNav: false,
+  },
+
+  {
     name: 'Profile',
     title: 'Profile',
     component: ProfileScreen,
@@ -39,5 +49,12 @@ export const routes = [
     component: SettingsScreen,
     icon: 'cog',
     showInBottomNav: true,
+  },
+  {
+    name: 'Edit Profile',
+    title: 'Edit Profile',
+    component: EditProfileScreen,
+    icon: 'cog',
+    showInBottomNav: false,
   },
 ];
